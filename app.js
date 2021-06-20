@@ -1,8 +1,10 @@
 const express = require("express");
+var cors = require('cors')
 const Multer = require("multer");
 const { Storage } = require("@google-cloud/storage");
 
 const app = express();
+app.use(cors())
 
 // firebase init
 const storage = new Storage({
